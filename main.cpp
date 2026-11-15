@@ -11,11 +11,12 @@ int main() {
     string line;
     while (getline(cin, line)) {
         if (line.empty()) continue;
+        string cur_line = line.substr(6);
         size_t pos = 0;
-        while ((pos = line.find(delim, pos)) != string::npos){
-            line.replace(pos, 1, " | ");
+        while ((pos = cur_line.find(delim, pos)) != string::npos){
+            cur_line.replace(pos, 1, " | ");
             pos+=3;
         }
-        cout << line << "\n";
+        cout << cur_line << "\n";
     }
 }
