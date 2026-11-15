@@ -7,6 +7,7 @@ int main() {
     string first_line;
     if (!getline(cin, first_line) || first_line.empty()) return 0;
     char delim = first_line.back();
+    cout << "OK" << "\n";
 
     string line;
     while (getline(cin, line)) {
